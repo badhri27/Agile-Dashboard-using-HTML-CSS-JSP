@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="icon" href="faviicon-01.png">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<title>Register</title>
+</head>
+<body class="body">
+	<div class="container-fluid pad0">
+		<div class="col-sm-12 pad0">
+		<div class="right-header-regpage"  style="font-family: 'PT Sans', sans-serif;"><ul>
+						<li><a class="nav-link" href="index_home.html">Home</a></li>
+						
+						<li><a class="nav-link" href="contact.jsp">Contact</a></li>
+						<li style="float: right" ><a class="nav-link " href="index.jsp">Login</a></li>
+					</ul></div>
+			<div class="row">
+			
+				<div class="col-sm-12 col-md-6">
+					<div class="left-section">
+						<div>
+							<img class="left-img" alt="leftsection"
+								src="webpage-left-black-01.jpg" align="left"
+								style="width: 100%; max-height: 100%">
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-12 col-md-6 rpad0" style="font-family: 'Manrope', sans-serif;">
+					<!--Login Button-->
+					
+
+
+
+
+					<div class="right-header-regpage container-fluid">
+						
+					</div>
+
+					<br>
+					<form class="register-form2 needs-validation" novalidate
+						method="post" action="adduser.jsp">
+
+						<fieldset class="form-group">
+							<label for="first-name"> Name: </label> <input
+								class="first-name form-control" type="text" name="name"
+								placeholder="enter the name" required />
+							<div class="valid-feedback"></div>
+							<div class="invalid-feedback">please enter a name</div>
+						</fieldset>
+
+						<fieldset class="form-group">
+							<label for="pass"> Password: </label> <input
+								class="pass form-control" type="password" name="password"
+								placeholder="enter the password" required />
+							<div class="valid-feedback"></div>
+							<div class="invalid-feedback">please enter a password</div>
+						</fieldset>
+
+						<fieldset class="form-group ">
+							<label for="email"> Email: </label> <input
+								class="email form-control" type="email" name="email"
+								placeholder="enter the email" required />
+							<div class="valid-feedback"></div>
+							<div class="invalid-feedback">please enter an emailid</div>
+						</fieldset>
+
+						<fieldset class="form-group">
+							<label for="Sex"> Sex: </label> <input class="sex " type="radio"
+								name="sex" value="male" /> Male <input class="sex "
+								type="radio" name="sex" value="female" /> Female
+							<div class="valid-feedback"></div>
+							<div class="invalid-feedback">please select a gender</div>
+						</fieldset>
+
+						<fieldset class="form-group">
+							<label for="country-names"> Country: </label> <select
+								class="country-names " name="country" style="width: 155px">
+
+								<option value="">-</option>
+								<option>India</option>
+								<option>Pakistan</option>
+								<option>Afghanistan</option>
+								<option>Berma</option>
+								<option>Other</option>
+							</select>
+
+						</fieldset>
+
+						<fieldset class="form-group">
+							<button onclick="func()" class="button " type="submit">
+								<div class="button-label">Register</div>
+							</button>
+
+						</fieldset>
+
+
+					</form>
+
+
+
+					<script>
+						// Disable form submissions if there are invalid fields
+						(function() {
+							'use strict';
+							window
+									.addEventListener(
+											'load',
+											function() {
+												// Get the forms we want to add validation styles to
+												var forms = document
+														.getElementsByClassName('needs-validation');
+												// Loop over them and prevent submission
+												var validation = Array.prototype.filter
+														.call(
+																forms,
+																function(form) {
+																	form
+																			.addEventListener(
+																					'submit',
+																					function(
+																							event) {
+																						if (form
+																								.checkValidity() === false) {
+																							event
+																									.preventDefault();
+																							event
+																									.stopPropagation();
+																						}
+																						form.classList
+																								.add('was-validated');
+																					},
+																					false);
+																});
+											}, false);
+						})();
+					</script>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
